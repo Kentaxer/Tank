@@ -77,10 +77,10 @@ var BTRoom = function (io, roomIndex) {
 	// get current tank by using the socket id
 	function getCurrentTank(socketId) {
 		var curTank;
-		if (p1Tank.id === socketId) {
+		if (p1Tank && p1Tank.id === socketId) {
 			curTank = p1Tank;
 		}
-		else if (p2Tank.id === socketId) {
+		else if (p2Tank && p2Tank.id === socketId) {
 			curTank = p2Tank;
 		}
 		else
